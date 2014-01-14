@@ -1,0 +1,47 @@
+nuget {
+    nuspec {
+        id = gecode-vc100;
+        version : 4.2.1;
+        title : Gecode;
+        authors : "Gecode authors";
+        owners : ksmyth;
+        licenseUrl : "https://svn.gecode.org/svn/gecode/trunk/LICENSE";
+        projectUrl: "http://www.gecode.org/";
+        iconUrl: "https://www.nuget.org/Content/Images/packageDefaultIcon.png";
+        requireLicenseAcceptance:false;
+        summary: Gecode include files;
+
+        description: @"Gecode is a toolkit for developing constraint-based systems and applications.";
+        releaseNotes: "";
+        copyright: Copyright 2013;
+        tags: { native, cpp, gecode };
+    }
+    dependencies {
+        packages : {
+            gecode/4.2.1,
+        };
+    }
+
+    files {
+        [win32,v100,release] { 
+            lib += Gecode_x86\lib\*-r-x86.lib;
+            symbols += Gecode_x86\bin\*-r-x86.pdb;
+            bin += Gecode_x86\bin\*-r-x86.dll;
+        }
+        [win32,v100,debug] { 
+            lib += Gecode_x86\lib\*-d-x86.lib;
+            symbols += Gecode_x86\bin\*-d-x86.pdb;
+            bin += Gecode_x86\bin\*-d-x86.dll;
+        }
+        [x64,v100,release] { 
+            lib += Gecode_x64\lib\*-r-x64.lib;
+            symbols += Gecode_x64\bin\*-r-x64.pdb;
+            bin += Gecode_x64\bin\*-r-x64.dll;
+        }
+        [x64,v100,debug] { 
+            lib += Gecode_x64\lib\*-d-x64.lib;
+            symbols += Gecode_x64\bin\*-d-x64.pdb;
+            bin += Gecode_x64\bin\*-d-x64.dll;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+nuget {
+    nuspec {
+        id = gecode;
+        version : 4.2.1;
+        title : Gecode;
+        authors : "Gecode authors";
+        owners : ksmyth;
+        licenseUrl : "https://svn.gecode.org/svn/gecode/trunk/LICENSE";
+        projectUrl: "http://www.gecode.org/";
+        iconUrl: "https://www.nuget.org/Content/Images/packageDefaultIcon.png";
+        requireLicenseAcceptance:false;
+        summary: Gecode include files;
+
+        description: @"Gecode is a toolkit for developing constraint-based systems and applications.";
+        releaseNotes: "";
+        copyright: Copyright 2013;
+        tags: { native, cpp, gecode };
+    }
+
+   files {
+      nestedInclude : {
+         #destination = ${d_include};
+         Gecode_x86\include\**\*,
+      };
+   }
+}
