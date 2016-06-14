@@ -1,8 +1,17 @@
+configurations 
+{
+    // This node contains custom pivot information.
+    Toolset 
+    {
+        key : "PlatformToolset"; // this is CoApp pre-defined key
+        choices: { v140, v120, v110, v100 };
+    };
+}
 nuget {
     nuspec {
-        id = gecode-vc100;
-        version : 4.2.1;
-        title : "Gecode-vc100";
+        id = gecode-vc140;
+        version : 4.4.0;
+        title : "Gecode-vc140";
         authors : "Gecode authors";
         owners : ksmyth;
         licenseUrl : "https://svn.gecode.org/svn/gecode/trunk/LICENSE";
@@ -18,27 +27,27 @@ nuget {
     }
     dependencies {
         packages : {
-            gecode/4.2.1,
+            gecode/4.4.0,
         };
     }
 
     files {
-        [win32,v100,release] { 
+        [win32,v140,release] { 
             lib += Gecode_x86\lib\*-r-x86.lib;
             symbols += Gecode_x86\bin\*-r-x86.pdb;
             bin += Gecode_x86\bin\*-r-x86.dll;
         }
-        [win32,v100,debug] { 
+        [win32,v140,debug] { 
             lib += Gecode_x86\lib\*-d-x86.lib;
             symbols += Gecode_x86\bin\*-d-x86.pdb;
             bin += Gecode_x86\bin\*-d-x86.dll;
         }
-        [x64,v100,release] { 
+        [x64,v140,release] { 
             lib += Gecode_x64\lib\*-r-x64.lib;
             symbols += Gecode_x64\bin\*-r-x64.pdb;
             bin += Gecode_x64\bin\*-r-x64.dll;
         }
-        [x64,v100,debug] { 
+        [x64,v140,debug] { 
             lib += Gecode_x64\lib\*-d-x64.lib;
             symbols += Gecode_x64\bin\*-d-x64.pdb;
             bin += Gecode_x64\bin\*-d-x64.dll;

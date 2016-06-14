@@ -1,7 +1,7 @@
 nuget {
     nuspec {
         id = gecode;
-        version : 4.2.1;
+        version : 4.4.0;
         title : Gecode;
         authors : "Gecode authors";
         owners : ksmyth;
